@@ -1,0 +1,11 @@
+virtualenv nombre_de_tu_entorno -p python3 
+
+source NombreDelEntorno/bin/activate 
+
+pip3 install -r requirements.txt 
+
+python -m pip show NombreDeLaBiblioteca
+
+pip freeze 
+
+pip list 

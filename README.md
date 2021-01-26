@@ -1,38 +1,38 @@
-# Salida a producción de un modelo 
+# Production of a model
  
-En este repo solo se hará la arquitectura del código, para así publicarlo a través de una API para que esté disponible desde la web. 
+In this repo, only the architecture of the code will be done, in order to publish it through an API so that it is available from the web.
  
-Para este ejemplo específico solo se realizará la publicación para un servidor local, pero lo de menos es mandarlo a un servidor de azure o en cualquier otro servicio en la nube, para que pueda ser visto por los demás usuarios.  
+For this specific example, the publication will only be made for a local server, but the least thing is to send it to an azure server or to any other cloud service, so that it can be seen by other users.
  
-Ahora, veamos la estructura de las carpetas: 
+Now, let's see the structure of the folders:
  
 ![24](https://user-images.githubusercontent.com/63415652/103446057-e3e53780-4c40-11eb-9cba-282a8d5a5aa2.PNG)
  
  
-Como podemos ver, el código se compone de varios archivos y varias carpetas, que son: 
+As we can see, the code is made up of several files and several folders, which are:
  
-* ArchitectVEnv: Es nuestro entorno virtual, el cual contiene todas las dependencias necesarias para que funcione el código. 
+* ArchitectVEnv: It is our virtual environment, which contains all the dependencies necessary for the code to work.
  
-* in: Aquí estarán los archivos de entrada, en este proyecto será el dataset de la felicidad. 
+* in: Here will be the input files, in this project it will be the happiness dataset.
  
-* models: Aquí se guardará el mejor modelo encontrado a través de la validación cruzada. 
+* models: The best model found through cross validation will be saved here.
  
-* out: Aquí saldrán los archivos CSV o de excel, pero en este caso no lo estamos usando. 
+* out: CSV or excel files will be output here, but in this case we are not using it.
  
-Ahora quedan 4 archivos más, que son: 
+Now there are 4 more files left, which are:
  
-* main: Este es el archivo principal de ejecución. 
+* main: This is the main execution file.
  
-* models: Donde estarán nuestros modelos. 
+* models: Where will our models be.
  
-* Server: Este con podrá permitir la configuración de nuestro servidor. 
+* Server: This can allow the configuration of our server.
  
-* utils: Aquí estarán funciones como la carga y la explotación de los archivos. 
+* utils: Here are functions such as loading and file exploitation.
  
-Ahora que ya tenemos nuestra arquitectura y el código listo, vamos a correr el servidor y nos vamos a ir a la ruta de predict: 
- 
+Now that we have our architecture and the code ready, we are going to run the server and go to the predict route:
+
 ![25](https://user-images.githubusercontent.com/63415652/103446183-628ea480-4c42-11eb-98e8-f14345e3265d.PNG)
  
-Y listo, tenemos un json que tiene una llave que se llama producción y el valor de la predicción que nos genero el modelo según los datos que le pasamos a nuestra predicción. 
+And voila, we have a json that has a key called production and the value of the prediction that the model generated for us according to the data that we passed to our prediction.
  
-Y ya así con el json que nos devolvió, podemos tratarlo en una web, una app móvil, desde js, android, etc. sin importar la naturaleza de lo que estemos haciendo ya tenemos las predicciones y tenemos un sistema que se conecta a nuestro modelo, de una manera extensible modular, fácil de utilizar que podemos convertir en la solución que estamos buscando.
+And so with the json that it returned, we can treat it in a web, a mobile app, from js, android, etc. Regardless of the nature of what we are doing, we already have the predictions and we have a system that connects to our model, in an extensible, modular, easy-to-use way that we can turn into the solution we are looking for.
